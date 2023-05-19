@@ -1,5 +1,6 @@
 package com.aang13.springboottfa.auth;
 
+import com.aang13.springboottfa.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,4 +15,6 @@ public class RegisterRequest {
     private String lastName;
     private String email;
     private String password;
+    private Role role;
+    private boolean mfaEnabled;
 }

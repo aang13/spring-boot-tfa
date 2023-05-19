@@ -15,4 +15,12 @@ public class AuthenticationController {
         var response = service.register(request);
         return ResponseEntity.ok(response);
     }
+
+    @PostMapping("/authenticate")
+    public ResponseEntity<AuthenticationResponse> authenticate (
+            @RequestBody AuthenticationRequest request
+    ) {
+        var response = service.authenticate(request);
+        return ResponseEntity.ok(response);
+    }
 }
